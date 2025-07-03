@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+       <style>
+         body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+         } 
+         input{
+            height: 20px;
+            width: 150px;
+          } 
+          select{
+            height: 28px;
+            width:150px;
+          }
+ 
+          table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+          
+          button{
+            background-color: blue;
+            color: white;
+            width: 110px;
+            height: 32px;
+            border: none;
+            border-radius: 5px;;
+          }
+          button:hover{
+             background-color: blueviolet;
+          }
+       </style>
+</head>
+<body>
+    <div class="container">
+    
+        <form action="" method="post">
+            <table>
+                <tr><td colspan="2"><h2>registrationForm</h2></td></tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+        
+                <tr>
+                    <td><label for="branch">Branch:</label></td>
+                    <td>
+                        <select id="branch" name="branch" required>
+                            <option value="CSE">Computer Science</option>
+                            <option value="ECE">Electronics & Communication</option>
+                            <option value="ME">Mechanical</option>
+                            <option value="EE">Electrical</option>
+                            <option value="CE">Civil</option>
+                        </select>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td><label for="year">Year:</label></td>
+                    <td>
+                        <select id="year" name="year" required>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                        </select>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td><label for="semester">Semester:</label></td>
+                    <td>
+                        <select id="semester" name="semester" required>
+                            <option value="1">1st Semester</option>
+                            <option value="2">2nd Semester</option>
+                        </select>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+        
+                <tr>
+                    <td><label for="confirm_password">Confirm Password:</label></td>
+                    <td><input type="password" id="confirm_password" name="confirm_password" required></td>
+                </tr>
+        
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button onclick="redirectToLogin('login.html')">Register</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function redirectToLogin(page) {
+    let email = document.getElementById('email').value.trim();
+    let pass = document.getElementById('password').value.trim();
+    let con_pass = document.getElementById('confirm_password').value.trim(); 
+
+    if (con_pass !== pass) {
+        alert("Passwords do not match.");
+    } else if (email === "" || pass === "" || con_pass === "") {
+        alert("Please fill in all fields.");
+    } else {
+        parent.document.getElementById("content-frame").src = page;
+    }
+}
+
+    </script>
+</body>
+</html>

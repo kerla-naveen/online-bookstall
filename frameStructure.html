@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyna Online Library</title>
+    <link rel="stylesheet" href="onlineLibCSS.css">
+    
+</head>
+<body>
+
+    <!-- 🔹 TOP BAR -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Library Logo">
+            <span>Nyna Online Library</span>
+        </div>
+        <nav class="nav">
+            <button onclick="loadContent('home.html')">Home</button>
+            <button onclick="loadContent('login.html')" >login</a></button>
+            <button onclick="loadContent('registrationForm.html')">Register</button>
+            <button onclick="loadContent('catalogue.html')" >catalogue</a></button>
+            <button onclick="loadContent('help.html')">Help</button>
+            <button onclick="loadContent('contact.html')">Contact</button>
+    
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search books...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- 🔹 MAIN LAYOUT -->
+    <div class="container">
+        <div class="sidebar">
+            <h3>branches</h3>
+            <button onclick="loadContent('cseBooks.html')">CSE</button>
+            <button onclick="loadContent('eceBooks.html')" >ECE</a></button>
+            <button onclick="loadContent('eeeBooks.html')">EEE</button>
+            <button onclick="loadContent('mechBooks.html')" >Mech</a></button>
+            <button onclick="loadContent('civilBooks.html')">Civil</button>
+            <button onclick="loadContent('mmeBooks.html')">MME</button>
+            
+        </div>
+        
+        <div class="main-content" id="main-content">
+            <iframe id="content-frame" width="100%" height="100%" src="home.html"></iframe>
+        </div>
+    </div>
+      <script>
+          function loadContent(page){
+              document.getElementById('content-frame').src=page;
+          }
+      </script>
+
+</body>
+</html>

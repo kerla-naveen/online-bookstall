@@ -1,0 +1,21 @@
+
+     .add-to-cart,.buy-now{
+        height: 30px;
+        width: 100px;
+         border:none;
+         background-color: orange;
+         color: white;
+         border-radius: 5px;
+         text-align: center;
+   }
+   .buy-now{
+       background-color: blue;
+   }
+   button{
+       margin-right:20px;
+   }
+   button:hover {
+      opacity: 0.6;
+  }
+
+

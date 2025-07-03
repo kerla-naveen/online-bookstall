@@ -1,0 +1,39 @@
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: left;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+th {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+/* Column Widths */
+.desc-col { width: 30%; }  /* More space for description */
+.cost-col { width: 10%; text-align: center; } /* Centered price */
+.btn-col { width: 15%; text-align: center; } /* Enough space for buttons */
+
+
+  button{
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;  /* Fixed width for consistency */
+    white-space: nowrap; /* Prevent text from breaking */
+}
+.add-to-cart {
+    background-color: #ffa500;
+    color: white;
+}
+.buy-now {
+    background-color: blue;
+    color: white;
+}
+.btn:hover {
+    opacity: 0.8;
+}

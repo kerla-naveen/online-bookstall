@@ -1,0 +1,38 @@
+body{
+    flex: 1;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.book {
+    width: 150px;
+    text-align: center;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.book img:hover {
+    transform: scale(1.05);
+}
+
+.book p {
+    margin-top: 5px;
+    font-size: 20px;
+}
+button{
+    border:none;
+    color:aliceblue;
+    background-color: rgb(71, 71, 235);
+    border-radius: 5px;
+}
+button:hover {
+     transform :scale(1.05);
+}
+     

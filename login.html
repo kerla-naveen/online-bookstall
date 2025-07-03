@@ -1,0 +1,87 @@
+<html>
+    <head>
+       <style>
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        input {
+            width: 50%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+          button{
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            height: 35px;
+            width: 100px;
+            color: white;
+          }
+        button:hover{
+            background-color: blueviolet;
+        }
+       </style>    
+    </head>
+
+<body>
+    <div class="login-container">
+<h2>Login</h2>
+<p>Enter your credentials to log in.</p>
+<form id="loginForm">
+    <p><label for="username" style="color: #01263f">Username:</label>
+    <input type="text" id="username" placeholder="Enter Username" required></p>
+    
+   <p><label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter Password" required></p>
+    
+    <p><button type="button" onclick="handleLogin()">Login</button></p>
+</form>
+
+
+<p>Don't have an account? <a href="#" onclick="loadRgistration('registrationForm.html')">Register here</a></p>
+    </div>
+<script>
+function handleLogin() {
+    
+
+    // Simulating login validation
+    if (username === "nyna" && password ==="") {
+        alert("Login Successful!");
+        document.getElementById('main-content').src='home.html'; // Redirect to home after login
+    } else {
+        alert("Invalid Credentials! Try again.");
+    }
+    
+}
+    function loadRgistration(page) {
+        parent.document.getElementById("content-frame").src = page;
+    }
+
+</script>
+</body>
+</html>
